@@ -1,0 +1,312 @@
+:root {
+  --primary-color: #076599;
+  --secondary-color: #f4f4f9;
+  --hover-color: #0c6ca0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: url("../img/vastbook-bg.jpg");
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  color: var(--hover-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 1200px;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.vastbook-header {
+  background: url("../img/header.jpg") no-repeat;
+  background-size: cover;
+  height: 300px;
+  padding: 60px 80px;
+  position: relative;
+  border-bottom: 10px solid #076599;
+}
+
+.vastbook-description {
+  color: white;
+  text-shadow: 0px 3px 2px rgba(62, 62, 62, 1);
+  padding-left: 12px;
+  font-size: 1rem;
+  line-height: 0;
+}
+
+.vastbook-name img {
+  width: 200px;
+}
+.navbar-toggler {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0;
+  color: white;
+  display: block;
+  padding: 0.6rem 1rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.vastbook-main-nav-ul {
+  flex-flow: column;
+}
+
+.vastbook-main-nav-container {
+  position: fixed;
+  width: 100%;
+  top: 5px;
+  right: 10px;
+  width: 200px;
+  z-index: 1000;
+}
+
+.vastbook-main-nav {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.vastbook-main-nav .nav-link {
+  color: white;
+  font-size: 1.3rem;
+  padding: 15px 20px;
+}
+
+.vastbook-main-nav .nav-link.active,
+.vastbook-main-nav .nav-link:hover,
+.vastbook-main-nav .nav-link:focus {
+  color: var(--primary-color);
+}
+
+.vastbook-main-content {
+  padding: 35px 30px;
+}
+
+.vastbook-form {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  margin: 10px auto 10px auto;
+}
+
+.vastbook-form h5 {
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.vastbook-form button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.vastbook-form button:hover {
+  background-color: var(--hover-color);
+}
+
+.vastbook-form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.vastbook-form a {
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.vastbook-book-img {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 150px;
+}
+
+p.error-message {
+  margin: 0;
+  padding: 0;
+  color: red;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+  font-weight: normal;
+}
+
+@media (min-width: 300px) {
+  .vastbook-header {
+    padding: 5px 0 0 20px;
+    height: 200px;
+  }
+  .vastbook-name img {
+    width: 150px;
+  }
+  .vastbook-name {
+    margin-bottom: 5px;
+  }
+  .vastbook-description {
+    font-size: 0.9rem;
+    padding-left: 3px;
+  }
+  .vastbook-book-img {
+    top: 10px;
+    right: 10px;
+    width: 100px;
+  }
+}
+
+@media (min-width: 576px) {
+  .vastbook-header {
+    padding: 10px;
+    height: 250px;
+  }
+  .vastbook-description {
+    font-size: 0.9rem;
+    padding-left: 3px;
+  }
+}
+
+@media (min-width: 768px) {
+  .vastbook-header {
+    padding: 30px 40px;
+  }
+  .vastbook-name img {
+    width: 170px;
+  }
+  .vastbook-name {
+    margin-bottom: 10px;
+  }
+  .vastbook-description {
+    font-size: 1rem;
+    padding-left: 4px;
+  }
+  .vastbook-main-nav-ul {
+    flex-flow: row;
+    width: 100%;
+  }
+  .vastbook-main-nav-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    padding: 0;
+    width: 100%;
+  }
+  .vastbook-main-nav .nav-link {
+    padding: 10px 15px;
+  }
+  .vastbook-book-img {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 992px) {
+  .vastbook-name img {
+    width: 200px;
+  }
+  .vastbook-description {
+    font-size: 1rem;
+    padding-left: 12px;
+  }
+  .vastbook-header {
+    padding: 60px 80px;
+    background-size: 100% 100%;
+    height: 400px;
+  }
+  .vastbook-main-nav .nav-link {
+    padding: 15px 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  .vastbook-header {
+    height: 400px;
+    background-size: 100% 100%;
+  }
+  .vastbook-main-nav .nav-link {
+    padding: 25px;
+  }
+}
+
+@media (max-height: 360px) {
+  .vastbook-main-nav .nav-link {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
